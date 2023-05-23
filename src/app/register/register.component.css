@@ -1,0 +1,58 @@
+.card{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card-header{
+    background: white;
+    
+     
+}
+
+.card-header .top{
+    display:  flex;
+    justify-content: space-between;
+    background: white;
+
+
+}
+.card-header .top .logo img{
+   width: 70%;
+}
+.card-header .top  p{
+    margin-top: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#63c;
+}
+.card-header .info{
+    margin-top: 3rem;
+    font-size: 18px;
+    opacity: 0.4;
+    font-weight: 400;
+}
+
+.card-body{
+    padding: 1rem 0.5rem 0.5rem 1rem;
+}
+.card-body .delivre{
+    display: flex;
+}
+.card-body .delivre label{
+    padding-top: 10px;
+}
+.card-body .delivre #delivreeLe{
+    width: 70%;
+    margin-left: 15px;
+}
+.card-body .row{
+    margin-top: 3rem;
+}
+.card-body .btn{
+    background-color: #ffc107;
+    width: 150px;
+    height: 40px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}

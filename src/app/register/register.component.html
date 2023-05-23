@@ -1,0 +1,84 @@
+<div class="card">
+  <div class="card-header">
+    <div class="top ">
+      <div class="logo">
+        <img src="../../assets/pilink.png" alt="">
+      </div>
+
+      <p>accord de
+        confidentialité </p>
+
+    </div>
+
+    <p class="info">Veuillez rensiegner le formulaire ci-dessous afin d'établir un accord de confidentialité merci!!</p>
+  </div>
+
+  <!-- Message de confirmation avec succès -->
+  <div *ngIf="success" class="alert alert-success">
+    {{ confirmationMessage }}
+  </div>
+
+  <!-- Message d'erreur -->
+  <div *ngIf="error" class="alert alert-danger">
+    {{ confirmationMessage }}
+  </div>
+
+
+  <div class="card-body">
+
+    <form (ngSubmit)="submitForm()" #form="ngForm" class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+          <input type="text" id="nom" name="nom" required [(ngModel)]="nom" class="form-control"
+            placeholder="Entrez Votre nom...">
+        </div>
+        <div class="col-md-6">
+
+          <input type="text" id="prenom" name="prenom" required [(ngModel)]="prenom" class="form-control"
+            placeholder="Entre Votrez prénom...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          <input type="email" id="email" name="email" required [(ngModel)]="email" class="form-control"
+            placeholder="Entre Votrez email...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+
+          <input type="text" id="passport" name="passport" required [(ngModel)]="passport" class="form-control"
+            placeholder="Entrez votre numéro de passport ou CNI ...">
+        </div>
+        <div class="col-md-4 delivre">
+          <label for=""> delivré le : </label>
+          <input type="text" id="delivreeLe" name="delivreeLe" required [(ngModel)]="delivreeLe" class="form-control"
+            placeholder=" jours/mois/année">
+        </div>
+        <div class="col-md-4">
+
+          <input type="text" id="lieu" name="lieu" required [(ngModel)]="lieu" class="form-control"
+            placeholder="Entre le leiu de délivrance ...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+
+          <input type="text" id="domicilie" name="domicilie" required [(ngModel)]="domicilie" class="form-control"
+            placeholder="Vous este domiclié à ...">
+        </div>
+        <div class="col-md-6">
+
+          <input type="tel" id="tel" name="tel" required [(ngModel)]="tel" class="form-control"
+            placeholder="Entre Votre numéro de téléphone...">
+        </div>
+      </div>
+      <br>
+      <input type="submit" value="Enregistrer" class="btn b " [disabled]="!allFieldsFilled()">
+    </form>
+
+
+  </div>
+</div>
